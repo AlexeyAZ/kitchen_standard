@@ -1,0 +1,14 @@
+.phone {
+    background-position: left center;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    text-decoration: none;
+
+    @include media(w1024) {
+        font-size: 25px;
+    }
+
+    @include media(w768) {
+        
+    }
+}

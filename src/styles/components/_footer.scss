@@ -1,0 +1,216 @@
+.footer {
+	background-color: $footer-bg;
+    color: $footer-text;
+    font-family: 'PFAgoraSansPro', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 35px 0 30px;
+
+    @include media(w768) {
+        padding: 25px 0 20px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include media(w1024) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__block {
+        display: flex;
+        position: relative;
+        width: calc(100% / 3);
+
+        &_social {
+            flex-direction: column;
+            
+            @include media(w1024) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                order: 1;
+                width: 50%;
+            }
+
+            @include media(w768) {
+                //flex-direction: column;
+                margin-top: 0;
+            }
+        }
+
+        &_contacts {
+            flex-direction: column;
+
+            @include media(w1024) {
+                order: 3;
+                margin-top: 30px;
+            }
+
+            @include media(w768) {
+                flex-direction: row;
+                align-items: center;
+                margin-top: 10px;
+               // order: 2;
+            }
+        }
+
+        &_feedback {
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            @include media(w1024) {
+                width: 50%;
+                order: 2;
+            }
+
+            @include media(w768) {
+                display: none;
+                //align-items: center;
+                //order: 1;
+            }
+        }
+
+        @include media(w768) {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 0;
+        line-height: 1.6;
+
+        &_copy {
+
+        }
+
+        &_social-title {
+            margin-right: 10px;
+        }
+
+        &_adress {
+            text-align: center;
+
+            @include media(w768) {
+                text-align: left;
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        color: black;
+        align-items: center;
+        font-family: 'PFAgoraSansPro', Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+
+        @include media(w768) {
+            font-size: 18px;
+        }
+    }
+
+    &__logo-img {
+        margin-right: 10px;
+        max-width: 160px;
+
+        @include media(w768) {
+            max-width: 104px;
+        }
+    }
+
+    &__feedback {
+        text-align: right;
+        position: relative;
+    }
+
+    &__social {
+        //display: flex;
+        display: block;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        white-space: nowrap;
+
+        &_mobile {
+            display: none;
+
+            @include media(w768) {
+                display: block;
+                position: static;
+            }
+        }
+    }
+
+    &__social-item {
+        display: inline-block;
+        margin-right: 4px;
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+    
+    &__link {
+        transition: $trans;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        color: $footer-text;
+        text-decoration: none;
+
+        &:hover {
+            border-color: currentColor;
+        }
+
+        &_social {
+            border: none;
+            color: white;
+        }
+
+        &_politic {
+            border-bottom: 1px solid currentColor;
+            margin-left: 30px;
+
+            @include media(w1024) {
+                margin-left: 10px;
+            }
+
+            @include media(w768) {
+                margin-right: 0;
+            }
+        }
+
+        &_getcall {
+            border-bottom: 1px solid currentColor;
+            font-size: 18px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+
+        @include media(w768) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            order: -10;
+        }
+    }
+
+    &__phone {
+        font-size: 30px;
+        transition: $trans;
+        color: $footer-text;
+        line-height: 1;
+        text-decoration: none;
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,63 @@
+.ta-center {
+    text-align: center;
+}
+
+.ta-left {
+    text-align: left;
+}
+
+.tt-uppercase {
+    text-transform: uppercase;
+}
+
+.ff-slab {
+    font-family: "PFAgoraSlabPro", Arial, Helvetica, sans-serif;
+}
+
+.ff-serif {
+    font-family: "PFAgoraSerifPro", Arial, Helvetica, sans-serif;
+}
+
+.ff-sans {
+    font-family: "PFAgoraSansPro", Arial, Helvetica, sans-serif;
+}
+
+.ff-rub {
+    font-family: 'ALSRubl';
+}
+
+.color-white {
+    color: white;
+}
+
+.color-yellow {
+    color: $main-yellow;
+}
+
+.text-shadow {
+    text-shadow: 0 1px 1px black;
+}
+
+.black {
+    font-weight: 900;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb1 {
+    margin-bottom: 1em;
+}
+
+.mb2 {
+    margin-bottom: 2em;
+}

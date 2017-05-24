@@ -1,0 +1,55 @@
+.bottom-form-container {
+    
+    &__title {
+        
+        @include media (w768) {
+            font-size: 30px;
+        }
+    }
+}
+.bottom-form {
+    display: flex;
+    //flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    
+    @include media (w1024) {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+
+    @include media (w768) {
+        padding-bottom: 0;
+    }
+
+    &_second {
+
+        @include media (w768) {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__label {
+        display: block;
+        margin: 0 5px;
+        flex-shrink: 1;
+        //width: 32%;
+
+        @include media (w1024) {
+            margin-bottom: 20px;
+        }
+
+        @include media (w768) {
+            width: 100%;
+        }
+    }
+
+    &__btn {
+
+        @include media (w768) {
+            width: 100%;
+        }
+    }
+}

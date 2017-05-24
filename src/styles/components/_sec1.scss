@@ -1,0 +1,48 @@
+.sec1 {
+    background-image: url("../img/sec1-bg.jpg");
+    padding-bottom: 14%;
+
+    &__container {
+        text-shadow: 0 1px 2px black;
+    }
+
+    &__subtitle {
+        display: inline-block;
+        max-width: 800px;
+        margin-bottom: 1.5em;
+        padding-bottom: 1.5em;
+        position: relative;
+
+        &:after {
+            content: "";
+            transform: translateX(-50%);
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 1px;
+            width: 600px;
+
+            @include media(w768) {
+                content: none;
+            }
+        }
+
+        @include media(w768) {
+            border-bottom: 1px solid white;
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+            max-width: none;
+        }
+    }
+
+    &__note {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+
+        @include media(w768) {
+            max-width: none;
+        }
+    }
+}

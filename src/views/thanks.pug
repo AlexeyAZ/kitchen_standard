@@ -1,0 +1,23 @@
+extends templates/layout
+
+block vars
+    - var title = 'Main'
+
+block content
+    section.sec.thanks
+        include components/header
+        div.container.color-white
+            h3.thanks__heading.color-yellow.tt-uppercase.mb1.
+                <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой.
+            p.thanks__title.m.ff-sans.mb1.
+                Мы свяжемся с Вами<br> в ближайшее время
+            div.thanks__buttons
+                a(href="doc/mk.pdf" target="_blank").btn-round.thanks__buttons-link.
+                    Открыть презентацию
+                a(href="/index.html").btn-round.thanks__buttons-link.
+                    Вернуться на главную страницу
+            p.thanks__subtitle.mb0.ff-sans.
+                Режим работы: с 10.00 до 19.00 <br>
+                В субботу с 10.00 до 15.00 <br>
+                Поэтому, если Вы оставили заявку в нерабочее время, <br>
+                Мы перезвоним Вам на следующий рабочий день.

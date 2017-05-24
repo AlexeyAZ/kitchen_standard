@@ -1,0 +1,123 @@
+$calc-handle-size: 32px;
+
+.calc {
+    color: white;
+    margin: 0 auto;
+    width: 90%;
+
+    @include media(w768) {
+        width: auto;
+    }
+
+    &__wrap {
+        position: relative;
+        margin-bottom: 100px;
+    }
+
+    &__values {
+        display: flex;
+        font-family: "PFAgoraSansPro", Arial, Helvetica, sans-serif;
+        padding-left: $calc-handle-size / 2;
+        padding-right: $calc-handle-size / 2;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 100%;
+    }
+
+    &__value {
+        flex: 1;
+        color: white;
+        position: relative;
+        height: 100px;
+    }
+
+    &__value-number {
+        transform: translateX(50%);
+        padding-top: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &_first {
+            transform: translateX(-50%);
+            left: 0;
+            right: auto;
+        }
+
+        &:before {
+            content: "";
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 8px;
+            width: 1px;
+        }
+    }
+
+    &__money {
+        display: flex;
+        justify-content: space-between;
+
+        @include media(w1024) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include media(w768) {
+            align-items: flex-start;
+        }
+    }
+
+    &__sum {
+        font-size: 60px;
+
+        @include media(w768) {
+            font-size: 28px;
+        }
+    }
+
+    &__profit {
+        color: black;
+    }
+
+    &__profit-note {
+        background-color: $main-yellow;
+        display: inline-block;
+        padding: 20px 30px;
+    }
+
+    &__profit-sum {
+        font-size: 75px;
+
+        @include media(w768) {
+            font-size: 42px;
+        }
+    }
+
+    .rangeslider {
+        background-color: #1a1d24;
+        border-top: 1px solid black;
+        border-bottom: 1px solid #535761;
+
+        &__fill {
+            background-image: linear-gradient(to bottom, #ffe82b, #ffc306);
+        }
+
+        &__handle {
+            background-image: linear-gradient(to right bottom, #f7f6fb, #dedfda);
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            border: none;
+            top: -8px;
+            height: $calc-handle-size;
+            width: $calc-handle-size;
+
+            &:after {
+                content: none;
+            }
+        }
+    }
+
+    
+}

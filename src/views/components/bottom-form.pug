@@ -1,0 +1,12 @@
+div#bottomFormContainer.bottom-form-container
+    p.l.ff-sans.bold.ta-center.mb1.
+        Проверьте, свободен ли Ваш город?
+    form(data-next="#bigForm")#bottomForm.bottom-form
+        label.bottom-form__label
+            input(type="text" name="city" placeholder="Ваш город" required).input
+        label.bottom-form__label
+            input(type="text" name="phone" placeholder="Телефон" required).input
+        label.bottom-form__label
+            input(type="email" name="email" placeholder="E-mail" required).input
+        button.btn-round.bottom-form__btn.
+            Проверить город

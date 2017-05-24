@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Main</title>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;"></svg>
+    <div class="form-wrap form-wrap_small">
+      <div class="form-container" id="smallFormContainer">
+        <div class="form__close"></div>
+        <p class="form__heading">Оставьте заявку на презентацию франшизы</p>
+        <form class="form" id="smallForm" data-next="#bigForm">
+          <input class="input form__input" type="text" name="name" placeholder="Ваше имя" required="">
+          <input class="input form__input" type="text" name="phone" placeholder="Ваш телефон" required="">
+          <input class="input form__input" type="email" name="email" placeholder="Ваш email" required="">
+          <button class="btn-round form__btn js-big-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="form-wrap form-wrap_big">
+      <div class="form-container" id="bigFormContainer">
+        <div class="form__close"></div>
+        <p class="form__title">Спасибо!</p>
+        <p class="form__descr">В ближайшее время мы обработаем Вашу заявку. Для того, чтобы наш специалист мог максимально подробно ответить на все Ваши вопросы, заполните, пожалуйста, следующую форму. Заранее благодарим</p>
+        <form class="form" id="bigForm">
+          <input class="js-hidden-name" type="hidden" name="name1">
+          <input class="js-hidden-phone" type="hidden" name="phone1">
+          <input class="js-hidden-phone" type="hidden" name="email1">
+          <label class="form__label"><span>Введите Ваш город</span>
+            <input class="input form__input" type="text" name="city" placeholder="" required="">
+          </label>
+          <label class="form__label"><span>Введите Ваш возраст</span>
+            <input class="input form__input" type="text" name="age" placeholder="" required="">
+          </label>
+          <label class="form__label"><span>Наличие бизнеса / Опыт бизнеса</span>
+            <select class="form__select" name="business">
+              <option value="yes">Да</option>
+              <option value="no">Нет</option>
+            </select>
+          </label>
+          <label class="form__label"><span>Объем планируемых инвестиций</span>
+            <select class="form__select" name="volume">
+              <option value="100 000 - 250 000">100 000 — 250 000 рублей</option>
+              <option value="250 000 - 500 000">250 000 — 500 000 рублей</option>
+              <option value="500 000 - 750 000">500 000 — 750 000 рублей</option>
+              <option value="750 000 - 1 000 000">750 000 — 1 000 000 рублей</option>
+              <option value="1 000 000 - 1 500 000">1 000 000 — 1 500 000 рублей</option>
+              <option value="1 500 000 - 3 000 000">1 500 000 — 3 000 000 рублей</option>
+              <option value="3 000 000">Более 3 000 000 рублей</option>
+            </select>
+          </label>
+          <button class="btn-round form__btn form__btn_center">Получить предложение</button>
+        </form>
+      </div>
+    </div>
+    <section class="sec sec1">
+      <header class="header ff-sans">
+        <div class="container header__container">
+          <div class="header__item header__item_description">
+            <p class="bold header__description mb0">Франшиза<br>«Эталон Кухни»</p>
+          </div>
+          <div class="header__item header__item_logo"><a class="header__logo" href="/"><img class="header__logo-img" src="img/header-logo.jpg" alt=""></a></div>
+          <div class="header__item header__item_contacts"><a class="header__link phone bold header__link_pc" href="tel:88006005030" data-phone="88006005030">8 800 600 50 30</a><a class="header__link link link_getcall js-small-btn header__link_pc" href="">Заказать обратный звонок</a><a class="header__link header__link_call" href="tel:88006005030" data-phone="88006005030"><img class="header__img-call" src="img/icon-call.png" alt=""></a></div>
+        </div>
+      </header>
+      <div class="container color-white ta-center sec1__container">
+        <h2 class="tt-uppercase">Откройте свой<br> «бизнес на кухне»!</h2>
+        <p class="m ff-sans sec1__subtitle">— продавайте доступные кухни европейского качества и зарабатывайте от 295 000 рублей в месяц</p>
+        <div class="s ff-sans sec1__note mb1">
+          <p class="medium mb0">Динамика рынка, тонкости сферы и состав франшизы — в презентации.</p>
+          <p class="bold mb0">Скачайте, чтобы узнать всё:</p>
+        </div>
+        <button class="btn-round js-small-btn">Скачать PDF-презентацию франшизы (10 мб)</button>
+      </div>
+    </section>
+    <section class="sec sec2">
+      <div class="sec2__content sec2__content_top">
+        <div class="container sec2__container sec2__container_top">
+          <h3>Бизнес на кухнях,<br> который нужен каждому дому</h3>
+          <p class="s sec2__text mb2">Вдумайтесь — ежегодно в России появляется больше 1 500 000 новых квартир и домов! И в каждом из них есть кухня…</p>
+          <h3>Стоп</h3>
+          <p class="s sec2__text mb0">Кухонь там как раз и нет! Жильё совсем новое — а застройщики не горят желанием обставлять его за свой счёт. И новоиспечённые домовладельцы отправляются на поиски качественной кухни…</p>
+        </div>
+      </div>
+      <div class="sec2__content sec2__content_bottom">
+        <div class="container sec2__container sec2__container_bottom">
+          <h3 class="black color-white text-shadow">Кому они заплатят за кухню — решать только Вам</h3>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec3">
+      <div class="container ta-center color-white text-shadow">
+        <p class="l ff-sans sec3__text mb1">Сотни клиентов готовы платить за качественные кухни от <span class="bold sec3__summ">80 000 рублей</span>. Мы готовы поставлять Вам такие кухни</p>
+        <h3 class="sec3__title bold mb1">Хотите зарабатывать<br> на этом <span class="color-yellow">от 295 000<span class="ff-rub">c</span> в месяц?</span><br> Мы покажем, как</h3>
+        <button class="btn-round js-small-btn">Скачать PDF-презентацию франшизы (10 мб)</button>
+      </div>
+    </section>
+    <section class="sec sec4">
+      <div class="container">
+        <h3 class="ta-center">До первой прибыли всего 5 шагов:</h3>
+        <div class="ta-center mb2"><img src="img/icon-arrow.png" alt=""></div>
+        <div class="sec4__gallery">
+          <div class="sec4__gallery-row">
+            <div class="sec4__gallery-item sec4__gallery-item_left">
+              <div class="sec4__gallery-img-wrap">
+                <div class="sec4__gallery-img" style="background-image:url('img/sec4-img1.jpg');"></div><img class="sec4__gallery-img-mobile" src="img/sec4-img1.jpg" alt="">
+              </div>
+            </div>
+            <div class="sec4__gallery-item sec4__gallery-item_text">
+              <div class="sec4__gallery-number">
+                <div class="sec4__gallery-value">1</div>
+              </div>
+              <div class="sec4__gallery-text">
+                <p class="s">Стать нашим партнёром и получить права на бренд «Эталон Кухни»</p>
+                <div class="sec4__gallery-note">
+                  <p class="s bold mb0">Вложения:<span class="sec4__gallery-sum">300 000</span><span class="ff-rub">c</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sec4__gallery-row">
+            <div class="sec4__gallery-item sec4__gallery-item_text">
+              <div class="sec4__gallery-number">
+                <div class="sec4__gallery-value">2</div>
+              </div>
+              <div class="sec4__gallery-text">
+                <p class="s">Открыть выставочную точку по нашим инструкциям</p>
+                <div class="sec4__gallery-note">
+                  <p class="s bold mb0">Вложения:<span class="sec4__gallery-sum">600 000</span><span class="ff-rub">c</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="sec4__gallery-item sec4__gallery-item_right">
+              <div class="sec4__gallery-img-wrap">
+                <div class="sec4__gallery-img" style="background-image:url('img/sec4-img2.jpg');"></div><img class="sec4__gallery-img-mobile" src="img/sec4-img2.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="sec4__gallery-row">
+            <div class="sec4__gallery-item sec4__gallery-item_left">
+              <div class="sec4__gallery-img-wrap">
+                <div class="sec4__gallery-img" style="background-image:url('img/sec4-img3.jpg');"></div><img class="sec4__gallery-img-mobile" src="img/sec4-img3.jpg" alt="">
+              </div>
+            </div>
+            <div class="sec4__gallery-item sec4__gallery-item_text">
+              <div class="sec4__gallery-number">
+                <div class="sec4__gallery-value">3</div>
+              </div>
+              <div class="sec4__gallery-text">
+                <p class="s">Запустить рекламу, настройкой которой займёмся мы</p>
+                <div class="sec4__gallery-note">
+                  <p class="s bold mb0">Вложения:<span class="sec4__gallery-sum">30 000</span><span class="ff-rub">
+                      c
+                      </span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sec4__gallery-row">
+            <div class="sec4__gallery-item sec4__gallery-item_text">
+              <div class="sec4__gallery-number">
+                <div class="sec4__gallery-value">4</div>
+              </div>
+              <div class="sec4__gallery-text">
+                <p class="s">Принять заказ, отправить его нам и получить готовую кухню</p>
+                <div class="sec4__gallery-note">
+                  <p class="s bold mb0">Среднее число проданных кухонь в месяц:<span class="sec4__gallery-sum">24</span><span>единицы</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="sec4__gallery-item sec4__gallery-item_right">
+              <div class="sec4__gallery-img-wrap">
+                <div class="sec4__gallery-img" style="background-image:url('img/sec4-img4.jpg');"></div><img class="sec4__gallery-img-mobile" src="img/sec4-img4.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="sec4__gallery-row">
+            <div class="sec4__gallery-item sec4__gallery-item_left">
+              <div class="sec4__gallery-img-wrap">
+                <div class="sec4__gallery-img" style="background-image:url('img/sec4-img5.jpg');"></div><img class="sec4__gallery-img-mobile" src="img/sec4-img5.jpg" alt="">
+              </div>
+            </div>
+            <div class="sec4__gallery-item sec4__gallery-item_text">
+              <div class="sec4__gallery-number">
+                <div class="sec4__gallery-value">5</div>
+              </div>
+              <div class="sec4__gallery-text">
+                <p class="s">Установить кухню руками наёмных, опытных монтажников, и получить прибыль с продажи</p>
+                <div class="sec4__gallery-note">
+                  <p class="s bold mb0">Ежегодная чистая прибыль:<br> от<span class="sec4__gallery-sum">2 700 000</span><span class="ff-rub">c</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="ta-center xl ff-serif bold">Окупаемость — на 6 месяц после старта!</p>
+        <div class="ta-center">
+          <button class="btn-round js-small-btn">Скачать PDF-презентацию франшизы (10 мб)</button>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec5"><img class="sec5__bg-top" src="img/sec5-bg-top.png" alt="">
+      <div class="container">
+        <h3 class="medium color-white ta-center">Посчитайте Вашу прибыль уже сейчас</h3>
+        <div class="sec5__calc calc">
+          <p class="ff-sans color-white mb2">Количество продаж</p>
+          <div class="calc__wrap">
+            <input type="range" min="1" max="10" step="1" value="1">
+            <div class="calc__values">
+              <div class="calc__value">
+                <div class="calc__value-number calc__value-number_first">0</div>
+                <div class="calc__value-number">17</div>
+              </div>
+              <div class="calc__value">
+                <div class="calc__value-number">19</div>
+              </div>
+              <div class="calc__value">
+                <div class="calc__value-number">23</div>
+              </div>
+              <div class="calc__value">
+                <div class="calc__value-number">27</div>
+              </div>
+              <div class="calc__value">
+                <div class="calc__value-number">31</div>
+              </div>
+              <div class="calc__value">
+                <div class="calc__value-number">35</div>
+              </div>
+              <div class="calc__value">
+                <div class="calc__value-number">38</div>
+              </div>
+              <div class="calc__value">
+                <div class="calc__value-number">42</div>
+              </div>
+              <div class="calc__value">
+                <div class="calc__value-number">46</div>
+              </div>
+            </div>
+          </div>
+          <div class="calc__money ff-sans">
+            <p class="m">Выручка: <span class="calc__sum">800 000</span><span class="ff-rub">a</span></p>
+            <p class="m">Выручка: <span class="calc__sum">80 000</span><span class="ff-rub">a</span></p>
+          </div>
+          <p class="m ff-sans ta-center">Ежемесячные затраты: <span class="color-yellow"><span class="calc__sum">7 710</span><span class="ff-rub">a</span></span></p>
+          <div class="calc__profit ff-sans ta-center">
+            <div class="calc__profit-note">
+              <p class="m ta-left">Ваша прибыль:</p>
+              <p class="m"><span class="calc__profit-sum">23 800 000</span><span class="ff-rub">a</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec6"><img class="sec6__bg sec6__bg_top" src="img/sec6-bg-top.png" alt=""><img class="sec6__bg sec6__bg_bottom" src="img/sec6-bg-top.png" alt="">
+      <div class="container sec6__container"><img class="sec6__img" src="img/sec6-img.png" alt="">
+        <div class="sec6__text">
+          <h3 class="sec6__text-title">Думаете,<br> что все так<br> просто?</h3>
+          <p class="l bold">Просто!</p>
+          <p class="l">Если под рукой есть наша база знаний, бесперебойное производство и поддержка</p>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec7">
+      <div class="container ta-center">
+        <h3 class="mb1">Что Вы получаете, будучи нашим партнёром?</h3>
+        <div class="sec7__list">
+          <div class="sec7__list-item">
+            <div class="sec7__list-img-wrap"><img class="sec7__list-img" src="img/sec7-icon1.png" alt=""></div>
+            <div class="sec7__list-number"><span class="sec7__list-number-val">1</span></div>
+            <p class="xs">Быстро запоминающийся бренд с конкретным позиционированием</p>
+          </div>
+          <div class="sec7__list-item">
+            <div class="sec7__list-img-wrap"><img class="sec7__list-img" src="img/sec7-icon2.png" alt=""></div>
+            <div class="sec7__list-number"><span class="sec7__list-number-val">2</span></div>
+            <p class="xs">Схему работы: от открытия ИП до получения благодарности и денег от клиента</p>
+          </div>
+          <div class="sec7__list-item">
+            <div class="sec7__list-img-wrap"><img class="sec7__list-img" src="img/sec7-icon3.png" alt=""></div>
+            <div class="sec7__list-number"><span class="sec7__list-number-val">3</span></div>
+            <p class="xs">Эффективную маркетинговую стратегию и готовые рекламные материалы</p>
+          </div>
+          <div class="sec7__list-item">
+            <div class="sec7__list-img-wrap"><img class="sec7__list-img" src="img/sec7-icon4.png" alt=""></div>
+            <div class="sec7__list-number"><span class="sec7__list-number-val">4</span></div>
+            <p class="xs">Штат профессиональных дизайнеров, которые воплотят мечты Ваших заказчиков в реальность</p>
+          </div>
+          <div class="sec7__list-item">
+            <div class="sec7__list-img-wrap"><img class="sec7__list-img" src="img/sec7-icon5.png" alt=""></div>
+            <div class="sec7__list-number"><span class="sec7__list-number-val">5</span></div>
+            <p class="xs">Удалённый завод по производству эксклюзивных, доступных кухонь европейского качества</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec8"><img class="sec8__decor" src="img/sec8-flag.png" alt="">
+      <div class="container">
+        <div class="sec8__bg-mobile-wrap"><img class="sec8__bg-mobile" src="img/sec8-bg-mobile.jpg" alt=""></div>
+        <div class="sec8__note">
+          <p class="xl medium ta-center">Ничего лишнего. Только то, что нужно для старта</p>
+          <button class="btn-round js-small-btn">Скачать PDF-презентацию франшизы (10 мб)</button>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec9"><img class="sec9__bg" src="img/sec9-bg.png" alt="">
+      <div class="container ta-center color-white">
+        <h3 class="medium text-shadow">Мы поддержим Вас и поможем добиться вдохновляющих результатов!</h3>
+        <p class="l sec9__subtitle ff-sans">Обучение, мотивация, технологическое сопровождение — включено во франшизу и доступно только для одного партнёра в каждом городе!</p>
+        <div class="bottom-form-container" id="bottomFormContainer">
+          <p class="l ff-sans bold ta-center mb1">Проверьте, свободен ли Ваш город?</p>
+          <form class="bottom-form" data-next="#bigForm" id="bottomForm">
+            <label class="bottom-form__label">
+              <input class="input" type="text" name="city" placeholder="Ваш город" required>
+            </label>
+            <label class="bottom-form__label">
+              <input class="input" type="text" name="phone" placeholder="Телефон" required>
+            </label>
+            <label class="bottom-form__label">
+              <input class="input" type="email" name="email" placeholder="E-mail" required>
+            </label>
+            <button class="btn-round bottom-form__btn">Проверить город</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec10">
+      <div class="container">
+        <h3 class="ta-center mb1">Такие кухни Вы будете продавать:</h3>
+        <div class="sec10__gallery">
+          <div class="sec10__gallery-item"><img src="img/sec10-img1.jpg" alt=""></div>
+          <div class="sec10__gallery-item"><img src="img/sec10-img2.jpg" alt=""></div>
+          <div class="sec10__gallery-item"><img src="img/sec10-img3.jpg" alt=""></div>
+          <div class="sec10__gallery-item"><img src="img/sec10-img3.jpg" alt=""></div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec11">
+      <div class="container color-white ta-center">
+        <h3 class="sec11__heading mb1 text-shadow">Готовы стать представителем эталонной кухонной мебели в Вашем городе?</h3>
+        <div class="bottom-form-container" id="bottomFormContainer">
+          <p class="l ff-sans bold ta-center mb1 bottom-form-container__title text-shadow">Сообщите нам об этом прямо сейчас:</p>
+          <form class="bottom-form bottom-form_second" data-next="#bigForm" id="bottomFormSecond">
+            <label class="bottom-form__label">
+              <input class="input" type="text" name="city" placeholder="Ваш город" required>
+            </label>
+            <label class="bottom-form__label">
+              <input class="input" type="text" name="phone" placeholder="Телефон" required>
+            </label>
+            <label class="bottom-form__label">
+              <input class="input" type="email" name="email" placeholder="E-mail" required>
+            </label>
+            <button class="btn-round bottom-form__btn">Проверить город</button>
+          </form>
+          <p class="l ff-sans bold ta-center mb0">и конкуренты будут ровняться на Вас уже через 2 месяца после старта!</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__block footer__block_social"><a class="footer__logo" href="/"><img class="footer__logo-img" src="img/header-logo.jpg" alt=""><span class="footer__logo-text">Франшиза<br> «Эталон Кухни»</span></a><a class="header__link header__link_call" href="tel:88006005030" data-phone="88006005030"><img class="header__img-call" src="img/icon-call.png" alt=""></a></div>
+        <div class="footer__block footer__block_contacts">
+          <div class="footer__social footer__social_mobile">
+            <div class="footer__social-item"><a href="" target="_blank"><img src="img/icon-vk.png" alt=""></a></div>
+            <div class="footer__social-item"><a href="" target="_blank"><img src="img/icon-inst.png" alt=""></a></div>
+          </div>
+          <p class="footer__text footer__text_adress ff-sans">
+            Напишите нам в Viber и WhatsApp <br>
+            На номер 8 9600 488 666 <br>
+            <a class="footer__link" href="mailto:etalon-kuhni.ru">etalon-kuhni.ru</a>
+          </p>
+        </div>
+        <div class="footer__block footer__block_feedback">
+          <div class="footer__feedback">
+            <div class="footer__social">
+              <div class="footer__social-item"><a href="" target="_blank"><img src="img/icon-vk.png" alt=""></a></div>
+              <div class="footer__social-item"><a href="" target="_blank"><img src="img/icon-inst.png" alt=""></a></div>
+            </div>
+            <div class="footer__feedback-item"><a class="footer__phone bold" href="tel:89218450907" data-phone="89218450907">+7 921 845-09-07</a></div><a class="footer__link footer__link_getcall js-small-btn">Заказать обратный звонок</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/app.js"></script>
+    <!--script(src="https://cdnjs.cloudflare.com/ajax/libs/webshim/1.16.0/dev/polyfiller.js")-->
+  </body>
+</html>

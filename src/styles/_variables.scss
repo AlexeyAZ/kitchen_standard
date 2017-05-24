@@ -1,0 +1,26 @@
+$trans: all 0.3s ease;
+
+$content-max-width: 1180px;
+
+$container-side-padding-pc: 30px;
+$container-side-padding-tablet: 14px;
+
+$btn-height-pc: 68px;
+$btn-height-tablet: 68px;
+$btn-height-mobile: 50px;
+
+$input-height-pc: 38px;
+$input-height-tablet: $input-height-pc;
+$input-height-mobile: $input-height-pc;
+
+$input-font-size-pc: 25px;
+$input-font-size-tablet: 20px;
+$input-font-size-mobile: 20px;
+
+$btn-top-color: #ffdc02;
+$btn-main-bg: linear-gradient(to bottom, #ffdc02, #ffbd00);
+$btn-main-bg-hover: linear-gradient(to bottom, #ffea02, #ffc700);
+$btn-main-bg-focus: linear-gradient(to bottom, #f2a100, #f9c101);
+$footer-bg: white;
+$footer-text: black;
+$main-yellow: #ffc20f;

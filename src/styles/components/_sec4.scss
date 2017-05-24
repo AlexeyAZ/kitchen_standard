@@ -1,0 +1,188 @@
+.sec4 {
+    overflow: hidden;
+    padding-top: 50px;
+
+    &__gallery {
+        //display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        position: relative;
+
+        &:before, {
+            content: "";
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0));
+            position: absolute;
+            top: 0;
+            left: -50vw;
+            height: 10px;
+            width: 200vw;
+            z-index: 2;
+        }
+    }
+
+    &__gallery-row {
+        display: flex;
+        position: relative;
+        width: 100%;
+
+        @include media(w1024) {
+            flex-direction: column;
+        }
+    }
+
+    &__gallery-item {
+        display: flex;
+        align-items: flex-end;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 50%;
+        position: relative;
+        //width: 50%;
+
+        &_left {
+
+            .sec4__gallery-img-wrap {
+                right: 0;
+            }
+
+            @include media(w1024) {
+                margin-left: -$container-side-padding-tablet;
+                margin-right: -$container-side-padding-tablet;
+            }
+        }
+
+        &_right {
+
+            .sec4__gallery-img-wrap {
+                left: 0;
+            }
+
+            @include media(w1024) {
+                margin-left: -$container-side-padding-tablet;
+                margin-right: -$container-side-padding-tablet;
+                order: 0;
+            }
+        }
+
+        &_text {
+            justify-content: flex-start;
+            padding: 40px 10px 40px 10px;
+
+            @include media(w1024) {
+                order: 1;
+            }
+
+            @include media(w768) {
+                align-items: center;
+                padding: 10px 0 30px;
+            }
+        }
+
+        &:hover {
+
+            &:not(.sec4__gallery-item_text) {
+
+                .sec4__gallery-img {
+                    transform: scale(1.05);
+                }
+
+                .sec4__gallery-img-mobile {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        @include media(w1024) {
+            flex-basis: auto;
+        }
+    }
+
+    &__gallery-img-wrap {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 50vw;
+
+        @include media(w1024) {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    &__gallery-img {
+        transition: 1s ease;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        height: 100%;
+
+        @include media(w1024) {
+            display: none;
+        }
+    }
+
+    &__gallery-img-mobile {
+        display: none;
+        transition: 1s ease;
+        width: 100%;
+
+        @include media(w1024) {
+            display: block;
+        }
+    }
+
+    &__gallery-number {
+        color: $main-yellow;
+        text-align: center;
+        flex-shrink: 0;
+
+        &:before {
+            content: "Шаг";
+            font-size: 48px;
+            font-weight: 900;
+
+            @include media(w768) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__gallery-value {
+        font-size: 272px;
+        line-height: 0.7;
+
+        @include media(w768) {
+            font-size: 80px;
+        }
+    }
+
+    &__gallery-text {
+        margin-bottom: 30px;
+        flex-shrink: 1;
+
+        @include media(w768) {
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+    }
+
+    &__gallery-note {
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    &__gallery-sum {
+        font-size: 48px;
+        font-weight: 500;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        @include media(w768) {
+            font-size: inherit;
+        }
+    }
+}
