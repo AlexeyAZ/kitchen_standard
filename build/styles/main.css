@@ -3026,7 +3026,12 @@ a {
   .calc__profit-note {
     background-color: #ffc20f;
     display: inline-block;
-    padding: 20px 30px; }
+    padding: 20px 30px;
+    min-width: 400px; }
+    @media only screen and (max-width: 768px) {
+      .calc__profit-note {
+        min-width: auto;
+        width: 100%; } }
   .calc__profit-sum {
     font-size: 75px; }
     @media only screen and (max-width: 768px) {
@@ -3240,7 +3245,10 @@ a {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; }
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
       @media only screen and (max-width: 1024px) {
         .footer__block_contacts {
           -webkit-box-ordinal-group: 4;
@@ -3253,9 +3261,9 @@ a {
           -webkit-box-direction: normal;
               -ms-flex-direction: row;
                   flex-direction: row;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
           margin-top: 10px; } }
     .footer__block_feedback {
       -webkit-box-align: end;
@@ -3311,21 +3319,10 @@ a {
   .footer__feedback {
     text-align: right;
     position: relative; }
-  .footer__social {
-    display: block;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    white-space: nowrap; }
+  @media only screen and (max-width: 768px) {
     .footer__social_mobile {
-      display: none; }
-      @media only screen and (max-width: 768px) {
-        .footer__social_mobile {
-          display: block;
-          position: static; } }
+      display: block;
+      position: static; } }
   .footer__social-item {
     display: inline-block;
     margin-right: 4px; }
@@ -3481,6 +3478,42 @@ a {
 .sec4 {
   overflow: hidden;
   padding-top: 50px; }
+  .sec4__arrow {
+    position: relative; }
+    .sec4__arrow:before, .sec4__arrow:after {
+      content: "";
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      background-image: url("../img/icon-arrow.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%; }
+    .sec4__arrow:before {
+      -webkit-transition: 0.8s ease;
+      -o-transition: 0.8s ease;
+      transition: 0.8s ease;
+      width: 80%; }
+    .sec4__arrow:after {
+      -webkit-transition: 0.8s, ease 0.8s;
+      -o-transition: 0.8s, ease 0.8s;
+      transition: 0.8s, ease 0.8s;
+      width: 60%; }
+    .sec4__arrow:hover:before {
+      -webkit-transform: translate(-50%, 25%);
+          -ms-transform: translate(-50%, 25%);
+              transform: translate(-50%, 25%);
+      opacity: 1; }
+    .sec4__arrow:hover:after {
+      -webkit-transform: translate(-50%, 50%);
+          -ms-transform: translate(-50%, 50%);
+              transform: translate(-50%, 50%);
+      opacity: 1; }
   .sec4__gallery {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3626,6 +3659,8 @@ a {
         margin-left: 10px; } }
   .sec4__gallery-note span {
     display: inline-block; }
+  .sec4__gallery-note-nowrap {
+    white-space: nowrap; }
   .sec4__gallery-sum {
     font-size: 48px;
     font-weight: 500;
@@ -3907,13 +3942,30 @@ a {
               -ms-transform: translateY(-50%) scale(-1.1, 1.1);
                   transform: translateY(-50%) scale(-1.1, 1.1); }
   .sec10__gallery-item {
-    padding: 0 10px; }
+    padding: 0 10px;
+    height: 220px; }
     .sec10__gallery-item img {
       display: block;
       width: 100%; }
+    @media only screen and (max-width: 1024px) {
+      .sec10__gallery-item {
+        height: 32vw; } }
     @media only screen and (max-width: 768px) {
       .sec10__gallery-item {
-        padding: 0; } }
+        height: 60vw; } }
+  .sec10__gallery-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%; }
+    .sec10__gallery-img_mirror {
+      -webkit-transform: scaleY(-1);
+          -ms-transform: scaleY(-1);
+              transform: scaleY(-1); }
+    .sec10__gallery-img_rotate {
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
 
 .sec11 {
   background-image: url("../img/sec11-bg.jpg");

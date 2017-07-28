@@ -86,6 +86,12 @@ $calc-handle-size: 32px;
         background-color: $main-yellow;
         display: inline-block;
         padding: 20px 30px;
+        min-width: 400px;
+
+        @include media(w768) {
+            min-width: auto;
+            width: 100%;
+        }
     }
 
     &__profit-sum {

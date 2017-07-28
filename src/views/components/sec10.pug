@@ -3,11 +3,7 @@ section.sec.sec10
         h3.ta-center.mb1.
              Такие кухни Вы будете продавать:
         div.sec10__gallery
-            div.sec10__gallery-item
-                img(src="img/sec10-img1.jpg", alt="")
-            div.sec10__gallery-item
-                img(src="img/sec10-img2.jpg", alt="")
-            div.sec10__gallery-item
-                img(src="img/sec10-img3.jpg", alt="")
-            div.sec10__gallery-item
-                img(src="img/sec10-img3.jpg", alt="")
+            - for(var i = 1; i <= 19; i++) {
+                div().sec10__gallery-item
+                    div(style="background-image:url('img/sec10(" + i + ").JPG');").sec10__gallery-img
+            - }

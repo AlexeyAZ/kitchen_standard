@@ -2,8 +2,38 @@ $(function () {
 
     if ($('input[type="range"]').length) {
         $('input[type="range"]').rangeslider({
-            polyfill: false
+            polyfill: false,
+
+            onInit: function () {
+                getCalcSumm(1);
+            },
+
+            onSlide: function (position, value) {
+                getCalcSumm(value);
+            }
+
         });
+    }
+
+    function getCalcSumm(value) {
+
+        var number = $(".calc__value-number");
+
+        var sum1 = $("#sum1");
+        var sum2 = $("#sum2");
+        var sum3 = $("#sum3");
+
+        var sum1Text = sum1.data("sum") * +number.eq(value - 1).text();
+        var sum2Text = sum1Text * +sum2.data("coef");
+        var sum3Text = +sum1Text - +sum2Text;
+
+        function editSum(sum, sumText) {
+            sum.text(("" + sumText).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+        }
+
+        editSum(sum1, sum1Text);
+        editSum(sum2, sum2Text);
+        editSum(sum3, sum3Text);
     }
 
     $(".sec10__gallery").slick({
@@ -72,6 +102,16 @@ $(function () {
         }
     });
 
+    body.on("click", ".js-anchor-link", function (e) {
+        e.preventDefault();
+        var self = $(this);
+        var id = self.attr("href");
+
+        $("html,body").animate({
+            scrollTop: $(id).offset().top
+        }, 500);
+    });
+
     if (typeof wl != "undefined") {
         wl.callbacks.onFormSubmit = function ($form, res) {
             if ($form.data('next')) {
@@ -125,11 +165,6 @@ $(function () {
             $.when($.ajax({
                 type: "POST",
                 url: "php/send.php",
-                data: formData,
-                success: function (data) {}
-            }), $.ajax({
-                type: "POST",
-                url: "php/sendwe.php",
                 data: formData,
                 success: function (data) {}
             }));

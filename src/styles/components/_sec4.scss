@@ -2,6 +2,49 @@
     overflow: hidden;
     padding-top: 50px;
 
+    &__arrow {
+        position: relative;
+
+        &:before,
+        &:after {
+            content: "";
+            
+            transform: translateX(-50%);
+            background-image: url("../img/icon-arrow.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+        }
+
+        &:before {
+            transition: 0.8s ease;
+            width: 80%;
+        }
+
+        &:after {
+            transition: 0.8s, ease 0.8s;
+            width: 60%;
+        }
+
+        &:hover {
+
+            &:before {
+                transform: translate(-50%, 25%);
+                opacity: 1;
+            }
+
+            &:after {
+                transform: translate(-50%, 50%);
+                opacity: 1;
+            }
+        }
+    }
+
     &__gallery {
         //display: flex;
         flex-wrap: wrap;
@@ -173,6 +216,10 @@
         span {
             display: inline-block;
         }
+    }
+
+    &__gallery-note-nowrap {
+        white-space: nowrap;
     }
 
     &__gallery-sum {

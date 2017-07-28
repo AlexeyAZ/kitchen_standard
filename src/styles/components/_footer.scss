@@ -44,6 +44,7 @@
 
         &_contacts {
             flex-direction: column;
+            align-items: center;
 
             @include media(w1024) {
                 order: 3;
@@ -52,7 +53,7 @@
 
             @include media(w768) {
                 flex-direction: row;
-                align-items: center;
+                align-items: flex-start;
                 margin-top: 10px;
                // order: 2;
             }
@@ -131,15 +132,15 @@
 
     &__social {
         //display: flex;
-        display: block;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        right: 100%;
-        white-space: nowrap;
+        // display: block;
+        // align-items: center;
+        // position: absolute;
+        // top: 0;
+        // right: 100%;
+        // white-space: nowrap;
 
         &_mobile {
-            display: none;
+            //display: none;
 
             @include media(w768) {
                 display: block;

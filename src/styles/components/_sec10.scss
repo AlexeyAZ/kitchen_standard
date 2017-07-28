@@ -59,14 +59,34 @@
 
     &__gallery-item {
         padding: 0 10px;
+        height: 220px;
         
         img {
             display: block;
             width: 100%;
         }
 
+        @include media(w1024) {
+            height: 32vw;
+        }
+
         @include media(w768) {
-            padding: 0;
+            height: 60vw;
+        }
+    }
+
+    &__gallery-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+
+        &_mirror {
+            transform: scaleY(-1);
+        }
+
+        &_rotate {
+            transform: rotate(-90deg);
         }
     }
 }
